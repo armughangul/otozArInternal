@@ -1,0 +1,125 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\froman\fcharset0 Times-Roman;\f4\fmodern\fcharset0 Courier;\f5\froman\fcharset0 TimesNewRomanPSMT;
+}
+{\colortbl;\red255\green255\blue255;\red83\green85\blue2;\red0\green0\blue117;\red58\green62\blue68;
+\red88\green118\blue71;\red199\green200\blue201;\red26\green28\blue31;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c32549\c33333\c784;\csgenericrgb\c0\c0\c45882;\csgenericrgb\c22745\c24314\c26667;
+\csgenericrgb\c34510\c46275\c27843;\cssrgb\c81961\c82353\c82745;\cssrgb\c13333\c14510\c16078;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14900\viewh15320\viewkind1
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b\fs24 \cf0 React Native Training
+\f1\b0 \
+\
+\
+https://facebook.github.io/react-native/docs/getting-started\
+\
+1. Setup \
+	- Atom with plugins\
+	- Visual Studio Code ( has some drawback but works fine)\
+		- https://github.com/Microsoft/vscode-react-native\
+	- Intellij \
+	- Environment setup \'97 npm installation\
+2. How it works\
+	- Code via atom/VS Code/IntelliJ\
+	- Open XCode and run app in simulator/device\
+	- Open Android Studio and run app in simulator/device\
+	- It will host the JS on localhost and then run it as the JS server.\
+	- App in device/simulator will load the JS and runs it on the fly.\
+\
+3. Architecture Of ReactNative\
+	- It is not properly defined and has classes and functions that need to be organised properly.\
+\
+4. Basic Concepts to look into\
+	- FlexBox\
+		- https://css-tricks.com/snippets/css/a-guide-to-flexbox/\
+		- https://blog.reactnativecoach.com/understanding-flex-in-react-native-b34dfb4b16d1\
+		- https://medium.com/@drorbiran/the-full-react-native-layout-cheat-sheet-a4147802405c\
+	- Navigation\
+	- Native components support\
+	- Network classes\
+\
+5. Advance Architecture/Frameworks to follow\
+	- MVC\
+	- Flux\
+	- Redux\
+6. Compile Builds\
+	- https://medium.com/@tunvirrahmantusher/create-ipa-and-apk-from-react-native-72fe53c6a8db\
+7. Common Commands\
+	- react-native init\
+	- npm install\
+	- npm start \'97 \'97reset-cache\
+	- react-native run-ios\
+	- react-native run-android\
+	- to compile build for android i have to run these commands\
+		- cd android\
+		- sudo ./gradlew assembleRelease \'97stacktrace\
+For clear drawables (For windows => right click folder => git bash here)\
+\pard\pardeftab720\ri0\sl320\partightenfactor0
+
+\f2\fs26 \cf0 \
+rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw \
+\pard\pardeftab720\ri0\sl320\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 	- Build Android Release\
+		- react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/\
+		- cd android\
+		- sudo ./gradlew assembleRelease \'97stacktrace\
+	- Build iOS Release\
+		- react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios\
+\
+node --expose-gc --max_old_space_size=4096 ./node_modules/react-native/local-cli/cli.js bundle --entry-file index.js --platform ios --dev false --bundle-output \'93ios/main.jsbundle\'94 --assets-dest \'93ios\'94 --reset-cache\
+		- Archive build\
+8. Installing Fonts\
+	- https://medium.com/@kswanie21/custom-fonts-in-react-native-tutorial-for-ios-android-76ceeaa0eb78\
+	- https://medium.com/@danielskripnik/how-to-add-and-remove-custom-fonts-in-react-native-b2830084b0e4\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\tx7986\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 For android device attached with server\
+https://stackoverflow.com/questions/17901692/set-up-adb-on-mac-os-x
+\f2\fs22 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\fs24 \cf0 adb reverse tcp:8081 tcp:8081\
+\pard\pardeftab720\ri0\sl400\partightenfactor0
+
+\f2\fs28 \cf0 keytool \cf2 -\cf0 exportcert \cf2 -\cf3 alias\cf0  
+\fs22 key0
+\fs28  \cf2 -\cf0 keystore 
+\fs22 \cf1 /Users/aliawais/Desktop/Data/Reactnativeproject/Archive/AhsanGit/OmniGit/quiet-salad-28740/android/app
+\fs28 \cf0  \cf2 |\cf0  openssl sha1 \cf2 -\cf0 binary \cf2 |\cf0  openssl base64\cf4 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\ri0\sl320\partightenfactor0
+
+\f3\fs26 \cf0 keytool -list -v -keystore \{debug\} -alias 
+\f4 \cf5 androiddebugkey\
+\
+export ANDROID_SDK=/Users/AByte/Library/Android/sdk\
+export PATH=/Users/AByte/Library/Android/sdk/platform-tools:$PATH\
+\
+IOS device not connecting via cable => 
+\f1\fs30 \cf6 \cb7 \expnd0\expndtw0\kerning0
+sudo killall -STOP -c usbd\
+\
+\
+
+\f3\fs26 \cf0 \cb1 \kerning1\expnd0\expndtw0 Remove tag files \
+Packages issues\
+To show emulator \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf8 \CocoaLigature0 emulator -list-avds\
+To open emulator\
+emulator -avd Medium_Phone_API_36.0
+\f3\fs26 \cf0 \CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+\cf0 ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+\f5\fs22 \
+}
