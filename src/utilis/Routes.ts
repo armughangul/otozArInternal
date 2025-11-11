@@ -1,0 +1,46 @@
+
+export const Routes = {
+    Journey : "Journey",
+    Home : "Home",
+    MainSearchScreen : "MainSearchScreen",
+    Container : "Container",
+    RefineSearch : "RefineSearch",
+    CarDetailScreen : "CarDetailScreen",
+    InquiryScreen : "InquiryScreen",
+    LoginScreen : "LoginScreen",
+    RegisterOptionScreen : "RegisterOptionScreen",
+    RegisterScreen : "RegisterScreen",
+    ForgetPasswordScreen : "ForgetPasswordScreen",
+    ResetPasswordScreen : "ResetPasswordScreen",
+    OtpVerificationScreen : "OtpVerificationScreen",
+    PrivacyPolicyScreen : "PrivacyPolicyScreen",
+    TermsnCondition : "TermsnCondition",
+    FavouriteScreen : "FavouriteScreen",
+    EditProfile : "EditProfile",
+    ChangePasswordScreen : "ChangePasswordScreen",
+    ImageCropScreen : "ImageCropScreen",
+    InquiryListScreen : "InquiryListScreen",
+    InquiryDetailScreen : "InquiryDetailScreen",
+    OrderListScreen : "OrderListScreen",
+    OrderDetailScreen : "OrderDetailScreen",
+    OrderHistoryListScreen : "OrderHistoryListScreen",
+    HistoryDetailScreen : "HistoryDetailScreen",
+    FaqScreen : "FaqScreen",
+    ContactUsScreen : "ContactUsScreen",
+    LedgerScreen : "LedgerScreen",
+    AboutUsScreen : "AboutUsScreen",
+    HowItWorkScreen : "HowItWorkScreen",
+    SmartMatchingScreen : "SmartMatchingScreen",
+    SmartMatchIntroScreen : "SmartMatchIntroScreen",
+    SmartMatchInquiryScreen : "SmartMatchInquiryScreen",
+    SparkyScreen : "SparkyScreen"
+}
+
+export const TabRoutes = {
+  HomeStack :  "Home",
+  ArStack : "AR/VR",
+  Agentic : "Agentic",
+  FavStack : "Favourite",
+  MenuStack : "Menu",
+  Account : "Menu"
+}

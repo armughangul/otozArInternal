@@ -1,0 +1,11 @@
+{
+  "extends": "./node_modules/@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",   // or "es2020"
+    "target": "esnext",   // keep target modern
+    "jsx": "react-jsx",   // for React 17+/18
+    "moduleResolution": "node"
+  }
+
+  // Other configurations specific to your project...
+}
